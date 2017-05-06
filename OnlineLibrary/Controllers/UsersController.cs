@@ -30,6 +30,8 @@ namespace OnlineLibrary.Controllers
         ViewBag.CurrentPage = pageNumber;
         ViewBag.TotalPages = ViewBag.Count / pageSize;
         ViewBag.PageSize = pageSize;
+
+
       List<UserViewModel> userList = new List<UserViewModel>();
       var userDbList = service.GetList(pageNumber, pageSize, "FirstName","Asc");
       userList.InjectFrom(userDbList);
